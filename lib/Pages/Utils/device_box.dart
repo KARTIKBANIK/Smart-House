@@ -26,7 +26,9 @@ class SmartDeviceBox extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
-          color: powerOn ? Colors.grey[900] : Color.fromARGB(44, 164, 167, 189),
+          color: powerOn
+              ? Color.fromARGB(255, 29, 26, 26)
+              : Color.fromARGB(44, 125, 140, 250),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 25.0),
@@ -37,7 +39,7 @@ class SmartDeviceBox extends StatelessWidget {
               Image.asset(
                 iconPath,
                 height: 65,
-                color: powerOn ? Colors.white : Colors.grey.shade700,
+                color: powerOn ? Colors.amber : Colors.grey.shade700,
               ),
 
               // smart device name + switch
@@ -51,7 +53,7 @@ class SmartDeviceBox extends StatelessWidget {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
-                          color: powerOn ? Colors.white : Colors.black,
+                          color: powerOn ? Colors.amber : Colors.black,
                         ),
                       ),
                     ),
